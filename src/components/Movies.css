@@ -1,0 +1,124 @@
+
+/* Additional styling for the container */
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the content */
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230706/pngtree-gritty-cinematic-backdrop-a-luxurious-and-elegant-3d-rendering-of-a-image_3805012.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Slight shadow to lift the content */
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  color: white;
+}
+
+/* Other styles for the page (input, button, etc.) remain the same */
+.search-bar {
+  height: 100px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input, .search-btn {
+   /* Same height for both input and button */
+  padding: 0 10px; /* Same padding for both input and button */
+  font-size: 14px; /* Same font size */
+  border-radius: 4px; /* Same border-radius */
+  border: 1px solid #007bff; /* Same border color for both input and button */
+  color: #333; /* Set text color to dark gray */
+}
+
+
+.search-btn {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #0056b3; /* Darken button background color on hover */
+}
+
+.search-input:focus, .search-btn:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #0056b3; /* Highlight border on focus */
+}
+
+
+/* Wrapper for the movie cards */
+
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add spacing between cards */
+  justify-content: center; /* Center the cards */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Movie card styling */
+.movie-card {
+  width: 300px; /* Set a fixed width for all cards */
+  max-width: 100%; /* Prevent overflow if the container shrinks */
+  background: black;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensuring all images are the same size */
+.card-img-top {
+  width: 100%; /* Match the width of the card */
+  height: 180px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image scales without distortion */
+  border-bottom: 1px solid #ddd; /* Separation between image and content */
+}
+
+.movie-card-content {
+  padding: 15px;
+}
+
+.movie-card-content h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.movie-card-content p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive design: Center cards for smaller screens */
+@media (max-width: 768px) {
+  .movie-grid {
+    justify-content: center; /* Keep cards centered */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .movie-card {
+    width: 100%; /* Allow full width for smaller screens */
+    max-width: 300px; /* Prevent cards from exceeding their design width */
+  }
+}
