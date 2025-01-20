@@ -58,7 +58,7 @@
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Add spacing between cards */
+  gap: 80px; /* Add spacing between cards */
   justify-content: center; /* Center the cards */
   margin: 0 auto;
   padding: 20px;

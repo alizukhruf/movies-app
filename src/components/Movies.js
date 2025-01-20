@@ -42,6 +42,7 @@ const Movies = () => {
     }
   };
 
+  
   return (
     <div className="container mt-5" >
       <h2 className="text-center mb-4">Movies</h2>
@@ -54,7 +55,7 @@ const Movies = () => {
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyUp={handleKeyUp}
         />
-        <button className="search-btn" onClick={searchMovies}>Search</button>
+        {/* <button className="search-btn mb-2" onClick={searchMovies}>Search</button> */}
       </div>
       {movies.length > 0 ? (
         <div className="movie-grid">
